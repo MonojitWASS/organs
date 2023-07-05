@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    font-family: 'Montserrat', sans-serif;
+}
+.body-organs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading-text {
+    width: 100%;
+}
+.heading-text h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.heading-text p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.organs-disease {
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 50vw;
+    display: flex;
+    margin: 2vw 0;
+}
+.organs-disease .organs-sec {
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5vw;
+}
+.organs-disease .organs-sec .main-body {
+    width: 50%;
+    height: 47vw;
+    /* border: 1px solid red; */
+    background-image: url('./img/body.png');
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    position: relative;
+    opacity: 0.7;
+}
+.female-body {
+    background-image: url('./img/body-female.png') !important;
+}
+.main-body img {
+    cursor: pointer;
+    position: absolute;
+    filter: grayscale(1);
+    transition: 0.3s;
+    opacity: 0.6;
+}
+.main-body img:hover {
+    /* transform: scale(1.1); */
+    filter: none;
+    animation: scaling 1.5s linear infinite;
+    opacity: 1;
+}
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.main-body span {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85vw;
+    font-weight: 600;
+    color: #000;
+    padding: 0.5vw 1vw;
+    position: absolute;
+    display: none;
+}
+.main-body .brain {
+    width: 23%;
+    top: 0.5vw;
+    left: 7vw;
+}
+.main-body .txt-brain {
+    top: 2vw;
+    right: 3vw;
+}
+.main-body .brain:hover + .txt-brain {
+    display: block;
+}
+
+
+.main-body .stomach {
+    width: 21%;
+    top: 11.2vw;
+    left: 9vw;
+}
+.main-body .txt-stomach {
+    top: 13vw;
+    right: 0vw;
+}
+.main-body .stomach:hover + .txt-stomach {
+    display: block;
+}
+
+
+.main-body .pancreas {
+    width: 10%;
+    top: 14.5vw;
+    left: 9.5vw;
+}
+.main-body .txt-pancreas {
+    top: 14vw;
+    right: 0vw;
+}
+.main-body .pancreas:hover + .txt-pancreas {
+    display: block;
+}
+
+
+.main-body .lungs {
+    width: 35%;
+    top: 6.5vw;
+    left: 6.5vw;
+}
+.main-body .txt-lungs {
+    top: 8vw;
+    right: 1vw;
+}
+.main-body .lungs:hover + .txt-lungs {
+    display: block;
+}
+
+
+.main-body .thyroid {
+    width: 6%;
+    top: 6vw;
+    left: 9.47vw;
+}
+.main-body .txt-thyroid {
+    top: 5.5vw;
+    right: 2vw;
+}
+.main-body .thyroid:hover + .txt-thyroid {
+    display: block;
+}
+
+
+.main-body .heart {
+    width: 11%;
+    top: 9.4vw;
+    left: 9.4vw;
+}
+.main-body .txt-heart {
+    top: 10vw;
+    left: 3vw;
+}
+.main-body .heart:hover + .txt-heart {
+    display: block;
+}
+
+
+.main-body .intestine {
+    width: 32%;
+    top: 15.1vw;
+    left: 6.8vw;
+}
+.main-body .txt-intestine {
+    top: 17vw;
+    left: 0vw;
+}
+.main-body .intestine:hover + .txt-intestine {
+    display: block;
+}
+
+
+.main-body .kidney {
+    width: 26%;
+    top: 15.8vw;
+    left: 7.3vw;
+}
+.main-body .txt-kidney {
+    top: 16vw;
+    right: 1vw;
+}
+.main-body .kidney:hover + .txt-kidney {
+    display: block;
+}
+
+
+.main-body .male_rep {
+    width: 22%;
+    top: 19.2vw;
+    left: 7.75vw;
+    display: block;
+    transition: 0.3s ease;
+}
+.main-body .txt-male_rep {
+    top: 19.5vw;
+    right: -1vw;
+}
+.main-body .male_rep:hover + .txt-male_rep {
+    display: block;
+}
+
+
+.main-body .female_rep {
+    width: 22%;
+    top: 20.2vw;
+    left: 7.75vw;
+    display: none;
+    transition: 0.3s ease;
+}
+.main-body .txt-female_rep {
+    top: 19.5vw;
+    left: -1vw;
+}
+.main-body .female_rep:hover + .txt-female_rep {
+    display: block;
+}
+
+
+.gender-btn {
+    padding: 0.5vw 2vw;
+    color: #ced4da;
+    background-color: #ffffff;
+    border: 2px solid #ced4da;
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.gender-active {
+    border: 2px solid rgb(43, 43, 43);
+    color: #2e2e2e;
+    font-weight: 600;
+}
+
+
+
+
+
+
+.organs-disease .diseases-sec {
+    width: 50%;
+    /* background-color: rgb(255, 235, 235);  */
+}
+.blank {
+    width: 100%;
+    height: 100vw;
+}
+.organs-disease .diseases-sec .illness {
+    /* width: 100%; */
+    /* border: 1px solid red;  */
+    /* height: 10vw; */
+    padding: 0 2vw;
+}
+.organs-disease .diseases-sec .illness h4 {
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: #808080;
+}
+.disease-list {
+    width: 100%;
+    /* border: 1px solid blue; */
+    padding: 1vw;
+}
+.disease-list .diseases {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.5vw 1vw;
+    color: #a7a7a7;
+    margin: 0 0.5vw;
+    margin-bottom: 0.5vw;
+
+}

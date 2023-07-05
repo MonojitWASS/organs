@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organs</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <section class="body-organs">
+        <div class="heading-text">
+            <h1>Facing a Health Issue? Let us Help.</h1>
+            <p>Select a body organ and we’ll suggest the best available tests to help in precise diagnosis of the problem.</p>
+        </div>
+
+        <div class="button-box">
+            <button id="gMale" class="gender-btn gender-active" onclick="genderChangeToMale()">Male</button>
+            <button id="gFemale" class="gender-btn" onclick="genderChangeToFemale()">Female</button>
+        </div>
+
+        <div class="organs-disease">
+            <div class="organs-sec">
+                <div id="mainBody" class="main-body">
+                    <img class="brain" src="./img/brain.png" alt="">
+                    <span class="txt-brain">Brain</span>
+
+                    <img class="stomach" src="./img/stomach.png" alt="">
+                    <span class="txt-stomach">Stomach</span>
+
+                    <img class="pancreas" src="./img/pancreas.png" alt="">
+                    <span class="txt-pancreas">Pancreas</span>
+
+                    <img class="lungs" src="./img/lungs.png" alt="">
+                    <span class="txt-lungs">Lungs</span>
+                    
+                    <img class="thyroid" src="./img/thyroid-larynx.png" alt="">
+                    <span class="txt-thyroid">Thyroid</span>
+
+                    <img class="heart" src="./img/heart.png" alt="">
+                    <span class="txt-heart">Heart</span>
+
+                    <img class="intestine" src="./img/intestine.png" alt="">
+                    <span class="txt-intestine">Intestines</span>
+
+                    <img class="kidney" src="./img/kidney.png" alt="">
+                    <span class="txt-kidney">kidney</span>
+
+                    <img class="male_rep" id="male" src="./img/male_rep.png" alt="">
+                    <span class="txt-male_rep">Male<br>Reproductive<br>Organ</span>
+
+                    <img class="female_rep" id="female" src="./img/female_rep.png" alt="">
+                    <span class="txt-female_rep">Female<br>Reproductive<br>Organ</span>
+                </div>
+            </div>
+            <div class="diseases-sec">
+                <div class="illness" id="brain-illness">
+                    <h4>Commonly faced issues related Brain</h4>
+                    <h4>Commonly faced issues related Brain</h4>
+                    <div class="disease-list">
+                        <div class="diseases">Headaches</div>
+                        <div class="diseases">Seizures</div>
+                        <div class="diseases">Memory Loss</div>
+                        <div class="diseases">Stroke</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <div class="blank"></div>
+
+
+     <script>
+        // Gender Change On Button Click
+            let male = document.getElementById('male');
+            let female = document.getElementById('female');
+
+            let gMale = document.getElementById('gMale');
+            let gFemale = document.getElementById('gFemale');
+            
+            let mainBody = document.getElementById('mainBody');
+
+
+
+            function genderChangeToMale () {
+                male.style.display = "block";
+                female.style.display = "none";
+                gFemale.classList.remove('gender-active');
+                gMale.classList.add('gender-active');
+                mainBody.classList.remove('female-body');
+            }
+            function genderChangeToFemale () {
+                male.style.display = "none";
+                female.style.display = "block";
+                gFemale.classList.add('gender-active');
+                gMale.classList.remove('gender-active');
+                mainBody.classList.add('female-body');
+            }
+            
+     </script>
+
+
+
+</body>
+</html>
