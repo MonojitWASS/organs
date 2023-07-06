@@ -292,3 +292,9 @@ body {
     margin-bottom: 0.5vw;
 
 }
+
+
+.exp {
+    border: 1px solid red;
+    height: 30vw;
+}
